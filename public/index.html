@@ -18,41 +18,48 @@
         placeholder="Search City"
         autocomplete="off"
         class="block border-0 px-5 py-3 col-span-5 col-start-4 rounded-xl text-biru-1 ring-1 ring-inset ring-gray-400 placeholder:text-gray-500 focus:ring-1 focus:ring-inset focus:ring-biru-2 shadow-md"
+        id="input-search"
       />
-      <a href="" class="bg-biru-6 mx-2 rounded-xl text-white font-semibold flex items-center justify-center active:bg-biru-4 shadow-md transition ease-in-out hover:bg-biru-5 duration-200">Search</a>
+      <button class="bg-biru-6 mx-2 rounded-xl text-white font-semibold flex items-center justify-center active:bg-biru-4 shadow-md transition ease-in-out hover:bg-biru-5 duration-200" id="searchBTN">Search</button>
     </div>
 
     <!-- output -->
     <div class="w-full flex justify-center my-5 h-svh">
-      <div class="h-3/4 w-3/5 bg-biru-2 rounded-xl relative shadow-xl">
+      <div class="h-3/4 w-3/5 bg-biru-2 rounded-xl relative shadow-xl" id="weatherlist">
         <div class="flex">
-          <h1 class="font-semibold text-white mt-10 ml-12 text-3xl">Kota,</h1>
-          <h1 class="font-semibold text-white ml-1 mt-10 text-3xl">Country</h1>
-          <img src="" alt="" class="w-6 h-6 mt-10 ml-3" />
+          <h1 class="font-semibold text-white mt-10 ml-12 text-3xl" id="city">Kota,</h1>
+          <h1 class="font-semibold text-white ml-1 mt-10 text-3xl" id="country">Country</h1>
+          <img src="" alt="" class="w-6 h-6 mt-10 ml-3" id="img" />
         </div>
-        <p class="font-semibold text-white text-xl ml-12 mt-2">Localtime</p>
-        <p class="text-white text-lg ml-12 mt-2">nama cuaca</p>
-        <p class="text-white text-6xl w-max absolute right-12 top-10">39°C</p>
+        <p class="font-semibold text-white text-xl ml-12 mt-2" id="localtime">Localtime</p>
+        <p class="text-white text-lg ml-12 mt-2" id="weatherName">nama cuaca</p>
+        <p class="text-white text-6xl w-max absolute right-12 top-10" id="temp">39°C</p>
 
         <div class="min-w-fit h-32 mt-2 mx-12 grid grid-cols-2">
           <div class="my-auto mr-5 flex justify-between">
             <p class="text-white">temp</p>
-            <p class="text-white">29°C</p>
+            <p class="text-white" id="temp">29°C</p>
           </div>
           <div class="my-auto ml-5 flex justify-between">
             <p class="text-white">feelslike</p>
-            <p class="text-white">39°C</p>
+            <p class="text-white" id="feelslike">39°C</p>
           </div>
           <div class="my-auto mr-5 flex justify-between">
             <p class="text-white">wind speed</p>
-            <p class="text-white">6 Km/h</p>
+            <p class="text-white" id="windSpeed">6 Km/h</p>
           </div>
           <div class="my-auto ml-5 flex justify-between">
             <p class="text-white">wind degree</p>
-            <p class="text-white">123°</p>
+            <p class="text-white" id="windDegree">123°</p>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="data.js"></script>
   </body>
 </html>
