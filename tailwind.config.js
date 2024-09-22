@@ -15,6 +15,10 @@ module.exports = {
         "biru-9": "#89c2d9",
         "biru-10": "#a9d6e5",
       },
+
+      fontFamily: {
+        Helvetica: ['"Helvetica"', "sans-serif"],
+      },
     },
   },
   plugins: [],
