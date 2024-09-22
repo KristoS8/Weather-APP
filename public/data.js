@@ -33,3 +33,33 @@ $("#input-search").keyup(function (e) {
     searchSong();
   }
 });
+
+function manokwari() {
+  $.ajax({
+    url: "http://api.weatherstack.com/current?",
+    type: "get",
+    dataType: "json",
+    data: {
+      access_key: "0235a1e21f0392a9030cb225a02556d9",
+      query: "manokwari",
+    },
+    success: function (result) {
+      console.log(result);
+      $("#manokwariCity").html(result.location.name + ", ");
+      $("#manokwariCountry").html(result.location.country);
+      $("#manokwariLocaltime").html(result.location.localtime);
+      $("#manokwariWeatherName").html(result.current.weather_descriptions);
+      $("#manokwariTemp").html(result.current.temperature + "°C");
+      $("#manokwaritempSmall").html(result.current.temperature + "°C");
+      $("#manokwariFeelslike").html(result.current.feelslike + "°C");
+      $("#manokwariWindSpeed").html(result.current.wind_speed + " Km/h");
+      $("#manokwariWindDegree").html(result.current.wind_degree + "°");
+
+      $("#manokwariImg").attr("src", result.current.weather_icons);
+    },
+  });
+}
+
+if (true) {
+  manokwari();
+}
