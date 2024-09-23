@@ -11,6 +11,8 @@
       <p class="font-semibold text-biru-2 my-auto">Weather Today</p>
     </div>
 
+    <a href="https://weatherstack.com/documentation" class="absolute right-5 top-5 bg-biru-4 text-white font-semibold p-3 rounded-lg shadow-sm hover:bg-biru-3 active:bg-biru-5 text-sm">API DOCUMENTATION</a>
+
     <!-- search -->
     <div class="grid grid-cols-12 mt-5">
       <input
@@ -58,10 +60,11 @@
 
     <p class="mx-auto text-center text-3xl text-blue-700 shadow-sm p-3 rounded-md font-semibold w-max">Available Weather</p>
 
+    <!-- available weather manokwari n jakarta -->
     <div class="w-full h-screen grid grid-cols-12 my-8">
       <div class="bg-biru-3 h-3/5 col-start-2 col-end-6 rounded-xl shadow-xl relative">
         <div class="flex">
-          <h1 class="font-semibold text-white mt-10 ml-12 text-xl" id="manokwariCity">Search The City First!</h1>
+          <h1 class="font-semibold text-white mt-10 ml-12 text-xl" id="manokwariCity">Something Happen!</h1>
           <h1 class="font-semibold text-white ml-1 mt-10 text-xl" id="manokwariCountry"></h1>
           <img src="" alt="" class="w-6 h-6 mt-10 ml-3" id="manokwariImg" />
         </div>
@@ -89,32 +92,32 @@
         </div>
       </div>
 
-      <div class="bg-biru-3 h-3/5 col-start-8 col-end-12 rounded-xl shadow-xl">
+      <div class="bg-biru-3 h-3/5 col-start-8 col-end-12 rounded-xl shadow-xl relative">
         <div class="flex">
-          <h1 class="font-semibold text-white mt-10 ml-12 text-3xl" id="city">Search The City First!</h1>
-          <h1 class="font-semibold text-white ml-1 mt-10 text-3xl" id="country"></h1>
-          <img src="" alt="" class="w-6 h-6 mt-10 ml-3" id="img" />
+          <h1 class="font-semibold text-white mt-10 ml-12 text-xl" id="jakartaCity">Something Happen!</h1>
+          <h1 class="font-semibold text-white ml-1 mt-10 text-xl" id="jakartaCountry"></h1>
+          <img src="" alt="" class="w-6 h-6 mt-10 ml-3" id="jakartaImg" />
         </div>
-        <p class="font-semibold text-white text-xl ml-12 mt-2" id="localtime"></p>
-        <p class="text-white text-lg ml-12 mt-2" id="weatherName"></p>
-        <p class="text-white text-6xl w-max absolute right-12 top-10" id="temp"></p>
+        <p class="font-semibold text-white text-xl ml-12 mt-2" id="jakartaLocaltime"></p>
+        <p class="text-white text-lg ml-12 mt-2" id="jakartaWeatherName"></p>
+        <p class="text-white text-3xl w-max absolute right-12 top-10" id="jakartaTemp"></p>
 
         <div class="min-w-fit h-32 mt-2 mx-12 grid grid-cols-2">
           <div class="my-auto mr-5 flex justify-between">
             <p class="text-white">Temp</p>
-            <p class="text-white" id="tempSmall"></p>
+            <p class="text-white" id="jakartaTempSmall"></p>
           </div>
           <div class="my-auto ml-5 flex justify-between">
             <p class="text-white">Feelslike</p>
-            <p class="text-white" id="feelslike"></p>
+            <p class="text-white" id="jakartaFeelslike"></p>
           </div>
           <div class="my-auto mr-5 flex justify-between">
             <p class="text-white">Wind speed</p>
-            <p class="text-white" id="windSpeed"></p>
+            <p class="text-white" id="jakartaWindSpeed"></p>
           </div>
           <div class="my-auto ml-5 flex justify-between">
             <p class="text-white">Wind degree</p>
-            <p class="text-white" id="windDegree"></p>
+            <p class="text-white" id="jakartaWindDegree"></p>
           </div>
         </div>
       </div>

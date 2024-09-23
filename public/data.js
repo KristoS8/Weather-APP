@@ -60,6 +60,33 @@ function manokwari() {
   });
 }
 
-if (true) {
-  manokwari();
+function jakarta() {
+  $.ajax({
+    url: "http://api.weatherstack.com/current?",
+    type: "get",
+    dataType: "json",
+    data: {
+      access_key: "0235a1e21f0392a9030cb225a02556d9",
+      query: "jakarta",
+    },
+    success: function (result) {
+      console.log(result);
+      $("#jakartaCity").html(result.location.name + ", ");
+      $("#jakartaCountry").html(result.location.country);
+      $("#jakartaLocaltime").html(result.location.localtime);
+      $("#jakartaWeatherName").html(result.current.weather_descriptions);
+      $("#jakartaTemp").html(result.current.temperature + "°C");
+      $("#jakartaTempSmall").html(result.current.temperature + "°C");
+      $("#jakartaFeelslike").html(result.current.feelslike + "°C");
+      $("#jakartaWindSpeed").html(result.current.wind_speed + " Km/h");
+      $("#jakartaWindDegree").html(result.current.wind_degree + "°");
+
+      $("#jakartaImg").attr("src", result.current.weather_icons);
+    },
+  });
 }
+
+// if (true) {
+//   manokwari();
+//   jakarta();
+// }
